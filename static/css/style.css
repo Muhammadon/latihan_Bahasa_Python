@@ -1,0 +1,10 @@
+.heading {
+    margin-top: 20px;
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+.heading h1 {
+    font-weight: bold;
+    font-size: 2rem;
+}

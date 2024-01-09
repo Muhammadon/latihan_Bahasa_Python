@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static "blog/css/style.css" %}">
+{% endblock style %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block page_title %}
+    {{ heading }}
+{% endblock page_title %}
+
+{% block content %}
+    {{ subheading }}
+    <hr><hr><hr>
+    <br>
+
+    <ul class="list-disc"> 
+        <li class="mb-2">
+            <a href="/blog">all_post</a>
+        </li>
+    {% for data_category in categories %}
+        <li class="mb-2">
+            <a href="/blog/category/{{data_category.category }}">{{data_category.category }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <br><br>
+    <h2 class="content">{{ posts.judul }}</h2>
+    <h2>{{ posts.body }}</h2>
+    <h3>{{ posts.publish }}</h3>
+{% endblock content %}
